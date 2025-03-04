@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function buttonClicked() {
+            let textfeld = document.getElementById("textfeld");
+            textfeld.innerHTML = "Button wurde geklickt";
+        }
+        function deleteText() {
+            let textfeld = document.getElementById("textfeld");
+            textfeld.innerHTML = "";
+        }
+        function changeColor() {
+            let bodyColor = window.getComputedStyle(document.body).backgroundColor;
+            console.log("test", bodyColor);
+            if (bodyColor === 'rgb(0, 128, 0)') {
+                document.body.style.backgroundColor = 'rgb(128, 0, 0)';
+            } else {
+                document.body.style.backgroundColor = 'rgb(0, 128, 0)';
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onClick="buttonClicked()">Klick mich</button>
+    <button onClick="deleteText()">Lösche mich</button>
+    <button onClick="changeColor()">Farbe ändern</button>
+    <h1 id="textfeld"> </h1>
+
+</body>
+
+</html>
