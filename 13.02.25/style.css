@@ -1,0 +1,75 @@
+:root {
+  --primary-color: blue;
+  --background-color: green;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.navbarContainer {
+  background-color: red;
+  width: 100vw;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.contentContainer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: brown;
+  min-height: 50vh;
+  font-size: 70px;
+  text-align: center;
+}
+
+.footerContainer {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  height: 100%;
+  background-color: bisque;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.navArea {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+}
+
+.navAreaOne {
+  background-color: aquamarine;
+}
+
+.cssMeme {
+  height: 50vh;
+}
+
+.logImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.navAreaTwo {
+  background-color: yellow;
+  justify-content: center;
+}
+
+.navAreaThree {
+  background-color: blueviolet;
+}

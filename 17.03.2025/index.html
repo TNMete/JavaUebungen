@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selektoren Übung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extracssdatei.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="haupttitel">CSS Selektoren verstehen</h1>
+        <nav>
+            <ul>
+                <li class="nav-item">Start</li>
+                <li class="nav-item">Über uns</li>
+                <li class="nav-item">Kontakt</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inhalt">
+            <h2>Klassische Selektoren</h2>
+            <p>Dies ist ein <span class="hervorgehoben">hervorgehobenes</span> Wort.</p>
+        </section>
+
+        <section class="inhalt">
+            <h2>Erweiterte Selektoren</h2>
+            <ul id="liste">
+                <li>Erstes Element</li>
+                <li class="markiert">Zweites Element</li>
+                <li>Drittes Element</li>
+                <li class="markiert">Viertes Element</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Formulare</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email">
+
+                <button type="submit">Absenden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CSS Selektoren</p>
+    </footer>
+
+</body>
+
+</html>

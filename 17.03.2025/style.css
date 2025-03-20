@@ -1,0 +1,42 @@
+/* h1 {
+    color: darkred;
+}
+
+p {
+    font-size: 18px;
+}
+
+#haupttitel {
+    font-weight: bold;
+}
+
+.hervorgehoben,
+.markiert {
+    color: red;
+}
+
+.inhalt h2 {
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: green;
+}
+
+input:focus {
+    background-color: black;
+    color: white;
+}
+
+#liste :first-child,
+#liste :last-child {
+    font-weight: bold;
+} 
+
+ ul :first-child::first-letter {
+    color: red;
+}
+
+input[type="email"] {
+    border: red 2px solid;
+} */

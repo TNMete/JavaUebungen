@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: rgb(131, 131, 204);
+}
+
+.navbar {
+    width: 100vw;
+    height: 100px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.navArea {
+    flex: 1;
+    height: 100%;
+}
+
+.navAreaOne {
+    background-color: rgb(255, 255, 255);
+}
+
+.navAreaTwo {
+    background-color: rgb(168, 146, 73);
+    align-content: center;
+}
+
+.navAreaThree {
+    background-color: lightcoral;
+}
+
+.logoTitle {
+    color: purple;
+    font-size: larger;
+    text-align: center;
+}
+
+
+.logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: rgb(179, 42, 42);
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+    float: left;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-color: white;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.shopItem {
+    color: white;
+    text-align: center;
+}
+
+.contentBottom {
+    margin: 0 auto;
+    background-color: black;
+    border-color: white;
+    border-style: solid;
+    width: 95%;
+    height: 100px;
+    display: flex;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerLeft {
+    float: left;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(189, 71, 71);
+
+}
+
+.footerRight {
+    float: left;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(103, 148, 146);
+
+}

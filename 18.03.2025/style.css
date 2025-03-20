@@ -1,0 +1,26 @@
+body {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 10% 10% 70% 10%;
+    height: 100vh;
+}
+
+div {
+    border: 1px solid black;
+}
+
+/* .drei {
+    grid-column: 1 / -1;
+} */
+
+.whole-row {
+    grid-column: 1 / -1;
+}
+
+/* .zwei {
+    grid-column: 1 / -1;
+}
+
+.sechs {
+    grid-column: 1 / -1;
+} */

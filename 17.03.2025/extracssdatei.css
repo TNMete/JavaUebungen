@@ -1,0 +1,34 @@
+/* wählt alle li elemente in "nav" aus und färbt sie blue */
+
+nav li {
+    color: blue;
+}
+
+/* #liste <- wählt alle id's mit dem Namen Liste aus und ">" wählt nur direkte childs aus" */
+/* mit "("text")" kann man verschachtelte Elemente "anpeilen */
+
+#liste>li {
+    font-weight: bold;
+}
+
+/* ändern farbe wenn man mit der Maus über den Button "hovert" */
+button:hover {
+    background-color: rgb(190, 36, 75);
+}
+
+/* erstes Element in der Liste wird fett markiert */
+#liste li:first-child {
+    font-size: 1.2em;
+}
+
+
+/* fäbrt die Hintergrundsfarbe Gelb sobald der Text markiert wird */
+::selection {
+    background: yellow;
+    color: black;
+}
+
+/* lle input-Felder mit "email" werden grau hinterlegt */
+input[type="email"] {
+    background-color: lightgray;
+}

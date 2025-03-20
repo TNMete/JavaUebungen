@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(136, 61, 165);
+    margin: 0;
+}
+
+.NavBarContainer {
+    background-color: #b92929;
+    flex: content;
+    display: flex;
+    padding: 10px;
+}
+
+.NavAreaOne {
+    background-color: #e0cbe0;
+    flex: content;
+    text-align: center;
+}
+
+.NavAreaTwo {
+    background-color: #e6e943;
+    flex: content;
+    text-align: center;
+}
+
+.NavAreaThree {
+    background-color: #21fc2c;
+    flex: content;
+    text-align: center;
+}
+
+.contentContainer {
+    background-color: #9b3b3b;
+    display: flex;
+    padding: 10px;
+}
+
+
+.footerContainer {
+    background-color: #39bda7;
+    width: 100vw;
+}
