@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { frage: "Wie lange dauert der 30-jährige Krieg?", antwort: "30 Jahre" },
         { frage: "Wie heißt der höchste Berg der Welt?", antwort: "Mount Everest" },
         { frage: "Welcher Fluss ist der längste Fluss der Welt?", antwort: "Nil" },
+        { frage: "Was ist das höchste Gebäude Deutschlands?", antwort: "Berliner Fernsehturm" },
     ];
 
     let aktuelleFrageIndex = 0;
