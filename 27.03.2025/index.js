@@ -1,4 +1,5 @@
 const express = require("express")
+const fs = require("fs")
 const app = express();
 app.use(express.json());
 
@@ -58,6 +59,23 @@ app.post("/tiere", (req, res) => {
 
     res.json(animals);
 })
+
+app.put("/tiere/:id", (req, res) => {
+    const id = req.params.id;
+    const newAge = req.body.age
+
+    const foundAnimal = animals.find(animal => animal.id == id)
+    foundAnimal.age = newAge
+    res.json(foundAnimal)
+
+})
+
+app.delete("/tiere/:id", (req, res) => {
+    const id = req.params.id;
+    const index = animals.findIndex(animal => animal.id == id)
+    animals.splice(index, 1)
+})
+
 
 app.listen(5005, () => {
     console.log("Server läuft ya salame 😘")
