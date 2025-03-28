@@ -24,5 +24,5 @@ app.get("/data", (req, res) => {
 });
 
 app.listen(5050, () => {
-    console.log("Server läuft auf http://localhost:5050");
+    console.log("läuft bei dir Chab 😎");
 });
