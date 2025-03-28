@@ -35,12 +35,35 @@ app.post("/cars", (req, res) => {
 app.put("/cars/:id", (req, res) => {
     const id = req.params.id;
     const cars = readFile();
-    const newCar = req.body.brand
-
-    const foundBrand = cars.find(car => car.id == id)
-    foundBrand.art = newCar
-    res.json(foundBrand)
+    const { brand, km, price } = req.body
+    const foundCar = cars.find(car => car.id == id)
+    if (brand) {
+        foundCar.brand = brand
+    } if (km) {
+        foundCar.km = km
+    } if (price) {
+        foundCar.price = price
+    }
     writeFile(cars)
+    res.json(foundBrand)
+})
+app.get("/cars/search", (req, res) => {
+    const cars = readFile();
+    const brand = req.query.brand;
+    let foundCar = cars.filter((cars) => cars.brand == brand);
+    if (foundCar.length === 0) {
+        const km = req.query.km;
+        foundCar = cars.filter((cars) => cars.km == km);
+    } if (foundCar.length === 0) {
+        const price = req.query.price;
+        foundCar = cars.filter((cars) => cars.price == price);
+    } if (foundCar.length === 0) {
+        const id = req.query.id;
+        foundCar = cars.filter((cars) => cars.id == id);
+    } else {
+        console.log("ungültige Eingabe!")
+    }
+    res.json(foundCar)
 })
 
 app.delete("/cars/:id", (req, res) => {
