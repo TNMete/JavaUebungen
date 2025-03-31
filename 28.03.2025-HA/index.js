@@ -17,6 +17,7 @@ function writeFile(data) {
 }
 
 app.get("/cars", (req, res) => {
+
     const cars = readFile();
     res.json(cars);
 })

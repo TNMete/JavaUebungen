@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autohaus API</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Neues Auto anlegen</h1>
-    <form id="form">
-        <input type="text" id="brand" placeholder="Marke">
-        <input type="text" id="km" placeholder="Kilometerstand">
-        <input type="text" id="price" placeholder="Preis in Euro">
-        <button type="submit" id="submitButton">Anlegen</button><br>
-    </form>
+    <div class="container">
+        <h1>Autohaus Mete</h1>
 
-    <p id="antwort"></p>
+        <h2>Neues Auto anlegen</h2>
+        <form id="form" class="form-group">
+            <input type="text" id="brand" placeholder="Marke" class="input-field">
+            <input type="text" id="km" placeholder="Kilometerstand" class="input-field">
+            <input type="text" id="price" placeholder="Preis in Euro" class="input-field">
+            <button type="submit" id="submitButton" class="btn">Anlegen</button>
+        </form>
+
+        <h2>Auto-Liste</h2>
+        <ul id="carList" class="car-list"></ul>
+    </div>
 </body>
 
 </html>
