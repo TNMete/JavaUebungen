@@ -1,32 +1,14 @@
 [
   {
+    "id": 1,
+    "brand": "BMW",
+    "km": "100.000",
+    "price": "50000"
+  },
+  {
     "id": 2,
-    "brand": "Lamborghini",
+    "brand": "Astron Martin",
     "km": "20.000",
-    "price": "300000"
-  },
-  {
-    "id": 3,
-    "brand": "Mercedes",
-    "km": "120.500",
-    "price": "85000"
-  },
-  {
-    "id": 4,
-    "brand": "Porsche",
-    "km": "50.000",
-    "price": "150000"
-  },
-  {
-    "id": 5,
-    "brand": "Tesla",
-    "km": "80.000",
-    "price": "60000"
-  },
-  {
-    "id": 6,
-    "brand": "Mitsubishi",
-    "km": "85.000",
-    "price": "5"
+    "price": "200000"
   }
 ]
