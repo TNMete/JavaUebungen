@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const sqlite3 = require("sqlite3")
 
-const db = new sqlite3.Database(":memory:")
+const db = new sqlite3.Database("tiere.db")
 
 db.serialize(() => {
     db.run(`CREATE TABLE tiere (
@@ -12,6 +12,7 @@ db.serialize(() => {
     krankheit VARCHAR(100),
     age INT,
     gewicht REAL);`)
+    db.run(`INSERT INTO tiere(tierart,name,krankheit,age,gewicht) VALUES ("Hund","Bello","husten",5,12.4)`)
 
     selectAllTiereQuery = `SELECT * FROM tiere`
     db.all(selectAllTiereQuery, (err, rows) => {
@@ -25,11 +26,12 @@ db.serialize(() => {
         db.close()
     })
 })
-
+app.use(express.static("public"))
 app.use(express.json()) // Ermöglicht Express Json aus einem Body auszulesen
-app.get("/", (req, res) => {
-    res.send("Die API funktioniert!")
-})
+
+// app.get("/", (req, res) => {
+//     res.send("Die API funktioniert!")
+// })
 
 app.get("/tiere", (req, res) => {
     db.all(selectAllTiereQuery, (err, rows) => {
