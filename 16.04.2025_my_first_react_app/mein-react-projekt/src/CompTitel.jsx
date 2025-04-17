@@ -1,5 +1,5 @@
 import React from 'react'
-const titel = "Meine Tierverwaltung"
+const titel = "JOSHUA IS THE GOAT"
 
 function CompTitel() {
     return (
