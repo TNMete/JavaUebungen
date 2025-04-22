@@ -1,0 +1,27 @@
+.listing-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.listing-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.listing-card h2 {
+    margin: 8px 0;
+    font-size: 1.4rem;
+}
+
+.listing-card p {
+    font-size: 1.1rem;
+    color: #333;
+}

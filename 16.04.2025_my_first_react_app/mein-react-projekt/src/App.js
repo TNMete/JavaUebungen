@@ -5,6 +5,7 @@ function App() {
     // let zahl = 15
     const [zahl, setZahl] = useState(15)
     const [colour, setColour] = useState("black")
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         console.log(`Zahl oder Farbe hat sich geändert: zahl=${zahl}, colour=${colour}`);
@@ -28,10 +29,36 @@ function App() {
         const randomColor = getRandomColor();
         setColour(randomColor);
     }
-    return (
-        <>
-            <p>Meine Lieblingszahl ist {zahl}</p>
 
+    useEffect(() => {
+        const savedMode = localStorage.getItem("darkMode");
+        if (savedMode === "true") {
+            setDarkMode(true);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("darkMode", darkMode.toString());
+    }, [darkMode]);
+
+    function toggleDarkMode() {
+        setDarkMode(!darkMode);
+    }
+
+    const appStyle = {
+        backgroundColor: darkMode ? "#222" : "#fff",
+        color: darkMode ? "#fff" : "#000",
+        minHeight: "100vh",
+        padding: "20px"
+    };
+
+    return (
+        <div style={appStyle}>
+            <button onClick={toggleDarkMode}>
+                {darkMode ? "Wechsle zu Light Mode" : "Wechsle zu Dark Mode"}
+            </button>
+
+            <p>Meine Lieblingszahl ist {zahl}</p>
             <button onClick={() => setZahl(zahl + 1)}>+</button>
             <button onClick={() => setZahl(zahl - 1)}>-</button>
             <button onClick={resetNumber}>Reset</button>
@@ -42,7 +69,7 @@ function App() {
             <button onClick={() => setColour("red")}>Ändere die Farbe zu rot</button>
             <button onClick={setRandomColour}>Zufällige Farbe</button>
             <button onClick={resetColour}>Reset</button>
-        </>
+        </div>
     );
 }
 
