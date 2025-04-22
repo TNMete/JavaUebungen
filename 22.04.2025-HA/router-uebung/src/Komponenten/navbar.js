@@ -5,7 +5,7 @@ import './navbar.css';
 function Navbar() {
     return (
         <nav className="navbar">
-            <div className="navbar-logo">fake Tax... AirBnB</div>
+            <div className="navbar-logo">fakeBnB</div>
             <div className="navbar-links">
                 <Link to="/">Home</Link>
                 <Link to="/about">Über uns</Link>
