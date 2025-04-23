@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./RecipeSearch.css";
 
 const API_KEY = "015341d85add4717b6d2e14f26da2c31";
@@ -8,9 +8,10 @@ export default function RecipeSearch() {
     const [ingredients, setIngredients] = useState("");
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     async function fetchRecipes() {
-        if (!ingredients) return; // keine leere Suche
+        if (!ingredients) return;
         setLoading(true);
         const response = await fetch(
             `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=5&apiKey=${API_KEY}`
@@ -21,32 +22,34 @@ export default function RecipeSearch() {
     }
 
     return (
-        <div className="p-4 max-w-xl mx-auto">
-            <h1 className="text-2xl font-bold mb-4">Rezeptsuche nach Zutaten</h1>
+        <div className="recipe-search-container">
+            <h1 className="recipe-search-title">Rezeptsuche nach Zutaten</h1>
 
-            <div className="mb-4">
+            <div>
                 <input
                     type="text"
                     placeholder="z.B. tomato, cheese"
                     value={ingredients}
                     onChange={(e) => setIngredients(e.target.value)}
-                    className="border p-2 w-full rounded"
+                    className="recipe-search-input"
                 />
                 <button
                     onClick={fetchRecipes}
-                    className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                    className="recipe-search-button"
                 >
                     Suchen
                 </button>
             </div>
 
-            {loading && <p>Lade Rezepte...</p>}
+            {loading && <p style={{ marginTop: "1rem" }}>Lade Rezepte...</p>}
 
-            <ul>
+            <button onClick={() => navigate(-1)} className="back-button">Zurück</button>
+
+            <ul className="recipe-list">
                 {recipes.map((recipe) => (
-                    <li key={recipe.id} className="mb-4">
-                        <Link to={`/rezepte/${recipe.id}`} className="flex items-center gap-4 hover:bg-gray-100 p-2 rounded">
-                            <img src={recipe.image} alt={recipe.title} className="w-24 rounded" />
+                    <li key={recipe.id}>
+                        <Link to={`/recipes/${recipe.id}`} className="recipe-card">
+                            <img src={recipe.image} alt={recipe.title} />
                             <p>{recipe.title}</p>
                         </Link>
                     </li>

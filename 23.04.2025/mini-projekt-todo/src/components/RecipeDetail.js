@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./RecipeSearch.css";
+import "./RecipeDetail.css";
 
 const API_KEY = "015341d85add4717b6d2e14f26da2c31";
 
@@ -20,24 +20,34 @@ export default function RecipeDetail() {
         fetchRecipeDetail();
     }, [id]);
 
-    if (!recipe) return <p>Lade Rezeptdetails...</p>;
+    if (!recipe) return <p className="recipe-loading">Lade Rezeptdetails...</p>;
 
     return (
-        <div className="p-4 max-w-2xl mx-auto">
-            <h1 className="text-2xl font-bold mb-4">{recipe.title}</h1>
-            <img src={recipe.image} alt={recipe.title} className="rounded w-full max-w-md mb-4" />
+        <div className="recipe-detail-container">
 
-            <h2 className="text-lg font-semibold mt-4">Zutaten:</h2>
-            <ul className="list-disc pl-5 mb-4">
+            <Link to="/recipes" className="back-button">Zurück zur Suche</Link>
+
+            <h1 className="recipe-detail-title">{recipe.title}</h1>
+
+            <img
+                src={recipe.image}
+                alt={recipe.title}
+                className="recipe-detail-image"
+            />
+
+            <h2 className="recipe-section-title">Zutaten</h2>
+            <ul className="recipe-ingredients">
                 {recipe.extendedIngredients.map((ing) => (
                     <li key={ing.id}>{ing.original}</li>
                 ))}
             </ul>
 
-            <h2 className="text-lg font-semibold">Anleitung:</h2>
+            <h2 className="recipe-section-title">Anleitung</h2>
             <div
-                className="prose prose-sm"
-                dangerouslySetInnerHTML={{ __html: recipe.instructions || "Keine Anleitung vorhanden." }}
+                className="recipe-instructions"
+                dangerouslySetInnerHTML={{
+                    __html: recipe.instructions || "Keine Anleitung vorhanden.",
+                }}
             />
         </div>
     );

@@ -17,7 +17,7 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/recipes" element={<RecipeSearch />} />
         <Route path="/visionboard" element={<VisionBoard />} />
-        <Route path="/rezepte/:id" element={<RecipeDetail />} />
+        <Route path="/recipes/:id" element={<RecipeDetail />} />
       </Routes>
     </Router>
   );

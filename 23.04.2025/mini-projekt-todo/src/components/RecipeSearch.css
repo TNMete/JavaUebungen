@@ -93,3 +93,21 @@
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--primary-hover);
+}
