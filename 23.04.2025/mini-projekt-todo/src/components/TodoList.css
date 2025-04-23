@@ -1,0 +1,106 @@
+.todo {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.todo input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.todo button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todo button:hover {
+    background-color: #0056b3;
+}
+
+.todo ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.todo li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.todo li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.todo li span {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+.todo li span[style*="line-through"] {
+    color: #999;
+}
+
+.todo-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.todo-input-wrapper input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.todo-input-wrapper button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -14px;
+}
+
+.todo-input-wrapper button:hover {
+    background-color: #0056b3;
+}

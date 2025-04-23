@@ -29,7 +29,7 @@ function App() {
             {houses.slice(0, anzahl).map((house) =>
               <Listing key={house.Id} Name={house.Name} Preis={house.Preis} image={house.image} />
             )}
-            <button onClick={() => setAnzahl(anzahl + 1)}>weiteres Haus anzeigen</button>
+            <button className="HausAnzeigeButton" onClick={() => setAnzahl(anzahl + 1)}>weiteres Haus anzeigen</button>
           </div>
         } />
         <Route path="/contact" element={<Kontakt />} />
