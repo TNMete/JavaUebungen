@@ -6,7 +6,7 @@ const API_KEY = "015341d85add4717b6d2e14f26da2c31";
 
 export default function RecipeDetail() {
     const { id } = useParams();
-    const [recipe, setRecipe] = useState(null);
+    const [recipe, setRecipe] = useState();
 
     useEffect(() => {
         async function fetchRecipeDetail() {
